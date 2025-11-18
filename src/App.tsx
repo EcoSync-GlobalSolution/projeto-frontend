@@ -1,21 +1,16 @@
 // src/App.tsx
-import { Routes, Route } from 'react-router-dom';
-import Home from './routes/Home';
-import Sobre from './routes/Sobre';
-import FAQ from './routes/FAQ';
-import Contato from './routes/Contato';
-import Integrantes from './routes/Integrantes';
-import ErrorPage from './routes/Error';
+import { Outlet } from 'react-router-dom';
+import Cabecalho from './components/Cabecalho';
+import Rodape from './components/Rodape';
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/sobre" element={<Sobre />} />
-      <Route path="/faq" element={<FAQ />} />
-      <Route path="/contato" element={<Contato />} />
-      <Route path="/integrantes" element={<Integrantes />} />
-      <Route path="*" element={<ErrorPage />} />
-    </Routes>
+    <>
+      <Cabecalho />
+      <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+        <Outlet />
+      </main>
+      <Rodape />
+    </>
   );
 }

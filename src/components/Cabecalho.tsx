@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import logo from '../Images/Gemini_Generated_Image_6qw3356qw3356qw3.png';
 
 export default function Cabecalho() {
   const [dark, setDark] = useState<boolean>(() => {
@@ -23,7 +24,7 @@ export default function Cabecalho() {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <img src="/logo-ecosync.png" alt="EcoSync" className="h-9 w-9 rounded-full shadow-sm" />
+          <img src= {logo} alt="EcoSync" className="h-9 w-9 rounded-full shadow-sm" />
           <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-blue-600">
             EcoSync
           </span>

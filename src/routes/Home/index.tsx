@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import Cabecalho from '../../components/Cabecalho';
-import Rodape from '../../components/Rodape';
+import logo from '../../Images/Gemini_Generated_Image_6qw3356qw3356qw3.png';
+import esquerda from '../../Images/unnamed.jpg';
+import direita from '../../Images/direita.jpg';
 
 type Depoimento = {
   nome: string;
@@ -10,7 +11,7 @@ type Depoimento = {
 };
 
 export default function Home() {
-  // Contadores de impacto
+  
   const [projects, setProjects] = useState(0);
   const [volunteers, setVolunteers] = useState(0);
   const [ods, setOds] = useState(0);
@@ -30,7 +31,7 @@ export default function Home() {
     animate(setOds, 17);
   }, []);
 
-  // Carrossel simples
+ 
   const depoimentos: Depoimento[] = useMemo(
     () => [
       {
@@ -75,9 +76,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      <Cabecalho />
+      
 
-      {/* Hero */}
+    
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-100 via-blue-100 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-900" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
@@ -107,7 +108,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Indicadores */}
+      
             <div className="mt-10 grid grid-cols-3 gap-4">
               <div className="rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 text-center">
                 <div className="text-3xl font-bold text-green-600">{projects}</div>
@@ -124,7 +125,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Imagem hero */}
           <div className="relative">
             <img
               src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=1200&fit=crop"
@@ -132,7 +132,7 @@ export default function Home() {
               className="rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
             />
             <img
-              src="/logo-ecosync.png"
+              src={logo}
               alt="EcoSync"
               className="absolute -bottom-6 -right-6 h-20 w-20 rounded-full shadow-lg ring-4 ring-white dark:ring-gray-900"
             />
@@ -140,7 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Parceiros */}
+      
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <p className="text-center text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400">
           Em parceria com instituições comprometidas com ESG
@@ -161,7 +161,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Recursos */}
+      
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-2xl sm:text-3xl font-bold">Recursos principais</h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400">
@@ -172,7 +172,7 @@ export default function Home() {
             {
               title: 'Matching inteligente',
               desc: 'Conecte talentos a causas e empresas com critérios objetivos.',
-              img: 'https://images.unsplash.com/photo-1531536720357-3c1f95e5d4f3',
+              img: esquerda,
             },
             {
               title: 'Dashboards ESG',
@@ -182,7 +182,7 @@ export default function Home() {
             {
               title: 'Certificação de impacto',
               desc: 'Relatórios e selos digitais para projetos auditados.',
-              img: 'https://images.unsplash.com/photo-1550565118-3a14e7a231d1',
+              img: direita,
             },
           ].map((f, i) => (
             <div
@@ -206,7 +206,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Como funciona */}
+    
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-2xl sm:text-3xl font-bold">Como funciona</h2>
         <div className="mt-8 grid lg:grid-cols-3 gap-8">
@@ -226,7 +226,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Depoimentos com carrossel */}
+      
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl sm:text-3xl font-bold">Quem usa, recomenda</h2>
@@ -263,7 +263,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* indicadores de posição */}
           <div className="mt-4 flex justify-center gap-2">
             {depoimentos.map((_, i) => (
               <button
@@ -279,7 +278,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA final */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="rounded-2xl bg-gradient-to-r from-green-600 to-blue-600 p-8 sm:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-6">
           <div>
@@ -305,7 +303,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Rodape />
+      
     </div>
   );
 }

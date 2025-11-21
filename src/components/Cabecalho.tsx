@@ -32,10 +32,13 @@ export default function Cabecalho() {
 
         <ul className="flex items-center gap-6 text-sm font-medium">
           <li><NavLink to="/" className="hover:text-green-600">Início</NavLink></li>
+          <li><NavLink to="/cadastrar-projeto" className="hover:text-green-600">Projetos</NavLink></li>
+          <li><NavLink to="/organizacoes" className="hover:text-green-600">Oraganizações</NavLink></li>
           <li><NavLink to="/sobre" className="hover:text-green-600">Sobre</NavLink></li>
           <li><NavLink to="/faq" className="hover:text-green-600">FAQ</NavLink></li>
           <li><NavLink to="/contato" className="hover:text-green-600">Contato</NavLink></li>
           <li><NavLink to="/integrantes" className="hover:text-green-600">Integrantes</NavLink></li>
+          <li><NavLink to="/login" className="hover:text-green-600">Login</NavLink></li>
           <li>
             <button
               onClick={() => setDark((v) => !v)}

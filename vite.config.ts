@@ -7,5 +7,14 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
-
+  server: {
+    proxy: {
+      '/api-projetos': {
+        target: 'https://projeto-java-6zhr.onrender.com',
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/api-projetos/, ''),
+      },
+    },
+  },
 })

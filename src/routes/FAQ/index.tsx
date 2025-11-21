@@ -1,4 +1,3 @@
-// src/routes/FAQ/index.tsx
 import { useState } from "react";
 
 type FAQItem = {
@@ -43,7 +42,7 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      {/* Hero */}
+      
       <section className="bg-gradient-to-r from-green-100 to-blue-100 dark:from-gray-800 dark:to-gray-700 py-16 text-center">
         <h1 className="text-4xl sm:text-5xl font-extrabold">
           Perguntas Frequentes
@@ -54,7 +53,7 @@ export default function FAQ() {
         </p>
       </section>
 
-      {/* FAQ Accordion */}
+      
       <section className="mx-auto max-w-4xl px-6 py-16">
         {faqData.map((item, index) => (
           <div

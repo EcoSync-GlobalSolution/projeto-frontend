@@ -1,7 +1,7 @@
 export default function Sobre() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      {/* Hero */}
+     
       <section className="relative bg-gradient-to-r from-green-100 to-blue-100 dark:from-gray-800 dark:to-gray-700 py-16 text-center">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white">
           Sobre a <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-blue-600">EcoSync</span>
@@ -11,7 +11,7 @@ export default function Sobre() {
         </p>
       </section>
 
-      {/* Missão, Visão, Valores */}
+      
       <section className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-3 gap-8">
         {[
           {
@@ -38,7 +38,7 @@ export default function Sobre() {
         ))}
       </section>
 
-      {/* Oportunidade e Modelo de Negócio */}
+      
       <section className="mx-auto max-w-5xl px-6 py-16 space-y-10">
         <div>
           <h2 className="text-2xl font-bold text-green-700 dark:text-green-400">Oportunidade Identificada</h2>
@@ -63,7 +63,7 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* Tecnologias */}
+      
       <section className="bg-gray-50 dark:bg-gray-800 py-16">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-2xl font-bold text-center">Tecnologias Aplicadas</h2>
@@ -84,7 +84,7 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* Mercado e Concorrência */}
+      
       <section className="mx-auto max-w-6xl px-6 py-16 space-y-10">
         <div>
           <h2 className="text-2xl font-bold text-green-700 dark:text-green-400">Mercado-Alvo</h2>
@@ -110,7 +110,7 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* Investimento e SLA */}
+      
       <section className="bg-gray-50 dark:bg-gray-800 py-16">
         <div className="mx-auto max-w-6xl px-6 space-y-10">
           <div>

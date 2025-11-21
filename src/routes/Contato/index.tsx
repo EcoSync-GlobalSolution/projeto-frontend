@@ -1,4 +1,3 @@
-// src/routes/Contato/index.tsx
 import { useState } from "react";
 
 export default function Contato() {
@@ -16,7 +15,7 @@ export default function Contato() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você pode integrar com backend ou API de envio de email
+    
     console.log("Dados enviados:", formData);
     setStatus("Mensagem enviada com sucesso!");
     setFormData({ nome: "", email: "", mensagem: "" });
@@ -24,7 +23,7 @@ export default function Contato() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      {/* Hero */}
+      
       <section className="bg-gradient-to-r from-green-100 to-blue-100 dark:from-gray-800 dark:to-gray-700 py-16 text-center">
         <h1 className="text-4xl sm:text-5xl font-extrabold">Entre em Contato</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300">
@@ -32,7 +31,7 @@ export default function Contato() {
         </p>
       </section>
 
-      {/* Formulário */}
+      
       <section className="mx-auto max-w-3xl px-6 py-16">
         <form
           onSubmit={handleSubmit}
@@ -98,7 +97,7 @@ export default function Contato() {
         </form>
       </section>
 
-      {/* Informações adicionais */}
+      
       <section className="mx-auto max-w-3xl px-6 pb-16 text-center">
         <h2 className="text-xl font-semibold">Outros canais</h2>
         <p className="mt-2 text-gray-700 dark:text-gray-300">
